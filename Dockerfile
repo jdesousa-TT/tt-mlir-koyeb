@@ -59,6 +59,7 @@ RUN mkdir -p /var/run/tailscale /var/cache/tailscale /var/lib/tailscale
 WORKDIR /workdir
 
 COPY start.sh /workdir/start.sh
+RUN chmod +x /workdir/start.sh
 
 ENTRYPOINT ["/usr/local/bin/koyeb-entrypoint.sh"]
 
